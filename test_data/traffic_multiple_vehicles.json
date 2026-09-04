@@ -1,0 +1,184 @@
+{
+  "vehicles": [
+    {
+      "vehicle_id": "VEH_001",
+      "plate_number": "AP39XX1234",
+      "points": [
+        {
+          "lat": 17.6868,
+          "lng": 83.2185,
+          "timestamp": 1725450000,
+          "camera_id": "CAM_001"
+        },
+        {
+          "lat": 17.6910,
+          "lng": 83.2231,
+          "timestamp": 1725450025,
+          "camera_id": "CAM_006"
+        }
+      ]
+    },
+    {
+      "vehicle_id": "VEH_002",
+      "plate_number": "AP31YY5678",
+      "points": [
+        {
+          "lat": 17.7000,
+          "lng": 83.2200,
+          "timestamp": 1725450000,
+          "camera_id": "CAM_010"
+        },
+        {
+          "lat": 17.6988,
+          "lng": 83.2195,
+          "timestamp": 1725450015,
+          "camera_id": "CAM_011"
+        }
+      ]
+    },
+    {
+      "vehicle_id": "VEH_003",
+      "plate_number": "AP16ZZ9012",
+      "points": [
+        {
+          "lat": 17.6840,
+          "lng": 83.2150,
+          "timestamp": 1725450000,
+          "camera_id": "CAM_020"
+        },
+        {
+          "lat": 17.6840,
+          "lng": 83.2150,
+          "timestamp": 1725450010,
+          "camera_id": "CAM_021"
+        }
+      ]
+    },
+    {
+      "vehicle_id": "VEH_004",
+      "plate_number": "AP28AA3456",
+      "points": [
+        {
+          "lat": 17.6900,
+          "lng": 83.2100,
+          "timestamp": 1725450000,
+          "camera_id": "CAM_030"
+        },
+        {
+          "lat": 17.6902,
+          "lng": 83.2160,
+          "timestamp": 1725450020,
+          "camera_id": "CAM_031"
+        }
+      ]
+    },
+    {
+      "vehicle_id": "VEH_005",
+      "plate_number": "AP05BB7890",
+      "points": [
+        {
+          "lat": 17.6800,
+          "lng": 83.2250,
+          "timestamp": 1725450000,
+          "camera_id": "CAM_040"
+        },
+        {
+          "lat": 17.6800,
+          "lng": 83.2250,
+          "timestamp": 1725450010,
+          "camera_id": "CAM_041"
+        }
+      ]
+    },
+    {
+      "vehicle_id": "VEH_006",
+      "plate_number": "AP37CC2468",
+      "points": [
+        {
+          "lat": 17.6750,
+          "lng": 83.2050,
+          "timestamp": 1725450000,
+          "camera_id": "CAM_050"
+        },
+        {
+          "lat": 17.6790,
+          "lng": 83.2090,
+          "timestamp": 1725450020,
+          "camera_id": "CAM_051"
+        }
+      ]
+    },
+    {
+      "vehicle_id": "VEH_007",
+      "plate_number": "AP09DD1357",
+      "points": [
+        {
+          "lat": 17.6880,
+          "lng": 83.2300,
+          "timestamp": 1725450000,
+          "camera_id": "CAM_060"
+        },
+        {
+          "lat": 17.6882,
+          "lng": 83.2350,
+          "timestamp": 1725450015,
+          "camera_id": "CAM_061"
+        }
+      ]
+    },
+    {
+      "vehicle_id": "VEH_008",
+      "plate_number": "AP40EE8642",
+      "points": [
+        {
+          "lat": 17.6950,
+          "lng": 83.2180,
+          "timestamp": 1725450000,
+          "camera_id": "CAM_070"
+        },
+        {
+          "lat": 17.6920,
+          "lng": 83.2160,
+          "timestamp": 1725450020,
+          "camera_id": "CAM_071"
+        }
+      ]
+    },
+    {
+      "vehicle_id": "VEH_009",
+      "plate_number": "AP26FF9753",
+      "points": [
+        {
+          "lat": 17.6700,
+          "lng": 83.2200,
+          "timestamp": 1725450000,
+          "camera_id": "CAM_080"
+        },
+        {
+          "lat": 17.6750,
+          "lng": 83.2205,
+          "timestamp": 1725450025,
+          "camera_id": "CAM_081"
+        }
+      ]
+    },
+    {
+      "vehicle_id": "VEH_010",
+      "plate_number": "AP12GG4826",
+      "points": [
+        {
+          "lat": 17.7050,
+          "lng": 83.2300,
+          "timestamp": 1725450000,
+          "camera_id": "CAM_090"
+        },
+        {
+          "lat": 17.7050,
+          "lng": 83.2240,
+          "timestamp": 1725450020,
+          "camera_id": "CAM_091"
+        }
+      ]
+    }
+  ]
+}

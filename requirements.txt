@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+python-multipart
+setuptools<81
+numpy
+opencv-python
+ultralytics
+yolov5
+pydantic
+scikit-learn
+paddleocr
+paddlepaddle
+python-dotenv

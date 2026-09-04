@@ -1,0 +1,1 @@
+Place vehicle_model.pt and plate_model.pt in this folder.

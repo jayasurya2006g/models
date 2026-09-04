@@ -1,0 +1,19 @@
+{
+  "anpr_image": {
+    "method": "POST",
+    "url": "http://127.0.0.1:8000/anpr/image",
+    "body": "form-data: image=<file>"
+  },
+  "trajectory": {
+    "method": "POST",
+    "url": "http://127.0.0.1:8000/traffic/trajectory",
+    "json": {
+      "vehicle_id": "17",
+      "plate_number": "AP39XX1234",
+      "points": [
+        {"lat":17.6868,"lng":83.2185,"timestamp":1725450000,"camera_id":"CAM001"},
+        {"lat":17.6872,"lng":83.2191,"timestamp":1725450005,"camera_id":"CAM002"}
+      ]
+    }
+  }
+}

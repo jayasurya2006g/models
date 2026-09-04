@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Traffic AI Map Test</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <style>
+        :root {
+            font-family: system-ui, sans-serif;
+            color: #17212b;
+        }
+
+        body {
+            margin: 0;
+            background: #edf2f4;
+        }
+
+        header {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            padding: 14px 18px;
+            background: #17212b;
+            color: white;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        form {
+            display: flex;
+            flex: 1;
+            max-width: 520px;
+            gap: 8px;
+        }
+
+        input,
+        button {
+            border: 0;
+            border-radius: 4px;
+            font: inherit;
+            padding: 9px 12px;
+        }
+
+        input {
+            flex: 1;
+        }
+
+        button {
+            background: #f4b942;
+            color: #17212b;
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        #status {
+            padding: 8px 18px;
+            background: white;
+            min-height: 1.2em;
+        }
+
+        #map {
+            height: calc(100vh - 104px);
+            min-height: 420px;
+        }
+
+        .vehicle-popup strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .vehicle-popup table {
+            border-collapse: collapse;
+            font-size: .85rem;
+        }
+
+        .vehicle-popup td {
+            border-top: 1px solid #ddd;
+            padding: 3px 6px 3px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Traffic AI Map Test</h1>
+        <form id="search-form">
+            <input id="search" type="search" placeholder="Search vehicle / plate" aria-label="Search vehicle or plate">
+            <button type="submit">Search</button>
+        </form>
+    </header>
+    <div id="status">Loading trajectories...</div>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        const map = L.map('map');
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+        const colors = ['#e4572e', '#17a398', '#3c6997', '#f4b942', '#7b2cbf'];
+        let vehicles = [];
+        const lines = new Map();
+        const markers = new Map();
+
+        function popup(vehicle) {
+            const rows = vehicle.points.map(point => `<tr><td>${point.camera_id || '-'}</td><td>${new Date(point.timestamp * 1000).toISOString()}</td></tr>`).join('');
+            return `<div class="vehicle-popup"><strong>${vehicle.vehicle_id} - ${vehicle.plate_number || 'No plate'}</strong><table><tbody>${rows}</tbody></table></div>`;
+        }
+
+        function selectVehicle(vehicle) {
+            lines.forEach((line, id) => line.setStyle({ weight: id === vehicle.vehicle_id ? 7 : 2, opacity: id === vehicle.vehicle_id ? 1 : .18 }));
+            map.fitBounds(lines.get(vehicle.vehicle_id).getBounds(), { padding: [30, 30] });
+            document.getElementById('status').textContent = `${vehicle.vehicle_id} | ${vehicle.plate_number} | ${vehicle.points.length} camera points`;
+            markers.get(vehicle.vehicle_id).openPopup();
+        }
+
+        fetch('traffic_multiple_vehicles.json').then(response => {
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            return response.json();
+        }).then(data => {
+            vehicles = data.vehicles;
+            const bounds = [];
+            vehicles.forEach((vehicle, index) => {
+                const coordinates = vehicle.points.map(point => [point.lat, point.lng]);
+                const line = L.polyline(coordinates, { color: colors[index % colors.length], weight: 3 }).addTo(map);
+                const marker = L.marker(coordinates[coordinates.length - 1]).bindPopup(popup(vehicle)).addTo(map);
+                lines.set(vehicle.vehicle_id, line);
+                markers.set(vehicle.vehicle_id, marker);
+                bounds.push(...coordinates);
+            });
+            map.fitBounds(bounds, { padding: [20, 20] });
+            document.getElementById('status').textContent = `${vehicles.length} trajectories loaded`;
+        }).catch(error => {
+            document.getElementById('status').textContent = `Could not load fixture: ${error.message}. Serve test_data over HTTP.`;
+        });
+
+        document.getElementById('search-form').addEventListener('submit', event => {
+            event.preventDefault();
+            const query = document.getElementById('search').value.trim().toLowerCase();
+            const vehicle = vehicles.find(item => item.vehicle_id.toLowerCase() === query || (item.plate_number || '').toLowerCase() === query);
+            if (vehicle) selectVehicle(vehicle);
+            else document.getElementById('status').textContent = 'No vehicle matched that ID or plate number';
+        });
+    </script>
+</body>
+
+</html>

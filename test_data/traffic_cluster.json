@@ -1,0 +1,19 @@
+{
+  "vehicles": [
+    {"vehicle_id":"VEH_001","plate_number":"AP39XX1234","points":[{"lat":17.6800,"lng":83.2100,"timestamp":1725450000,"camera_id":"A01"},{"lat":17.6900,"lng":83.2200,"timestamp":1725450020,"camera_id":"A02"}]},
+    {"vehicle_id":"VEH_002","plate_number":"AP31YY5678","points":[{"lat":17.6805,"lng":83.2105,"timestamp":1725450000,"camera_id":"A03"},{"lat":17.6905,"lng":83.2205,"timestamp":1725450020,"camera_id":"A04"}]},
+    {"vehicle_id":"VEH_003","plate_number":"AP16ZZ9012","points":[{"lat":17.6810,"lng":83.2110,"timestamp":1725450000,"camera_id":"A05"},{"lat":17.6910,"lng":83.2210,"timestamp":1725450020,"camera_id":"A06"}]},
+    {"vehicle_id":"VEH_004","plate_number":"AP28AA3456","points":[{"lat":17.6815,"lng":83.2115,"timestamp":1725450000,"camera_id":"A07"},{"lat":17.6915,"lng":83.2215,"timestamp":1725450020,"camera_id":"A08"}]},
+    {"vehicle_id":"VEH_005","plate_number":"AP05BB7890","points":[{"lat":17.6820,"lng":83.2120,"timestamp":1725450000,"camera_id":"A09"},{"lat":17.6920,"lng":83.2220,"timestamp":1725450020,"camera_id":"A10"}]},
+    {"vehicle_id":"VEH_006","plate_number":"AP37CC2468","points":[{"lat":17.6800,"lng":83.2100,"timestamp":1725450000,"camera_id":"B01"},{"lat":17.6800,"lng":83.2200,"timestamp":1725450020,"camera_id":"B02"}]},
+    {"vehicle_id":"VEH_007","plate_number":"AP09DD1357","points":[{"lat":17.6805,"lng":83.2105,"timestamp":1725450000,"camera_id":"B03"},{"lat":17.6805,"lng":83.2205,"timestamp":1725450020,"camera_id":"B04"}]},
+    {"vehicle_id":"VEH_008","plate_number":"AP40EE8642","points":[{"lat":17.6810,"lng":83.2110,"timestamp":1725450000,"camera_id":"B05"},{"lat":17.6810,"lng":83.2210,"timestamp":1725450020,"camera_id":"B06"}]},
+    {"vehicle_id":"VEH_009","plate_number":"AP26FF9753","points":[{"lat":17.6815,"lng":83.2115,"timestamp":1725450000,"camera_id":"B07"},{"lat":17.6815,"lng":83.2215,"timestamp":1725450020,"camera_id":"B08"}]},
+    {"vehicle_id":"VEH_010","plate_number":"AP12GG4826","points":[{"lat":17.6820,"lng":83.2120,"timestamp":1725450000,"camera_id":"B09"},{"lat":17.6820,"lng":83.2220,"timestamp":1725450020,"camera_id":"B10"}]},
+    {"vehicle_id":"VEH_011","plate_number":"AP21HH7531","points":[{"lat":17.6800,"lng":83.2100,"timestamp":1725450000,"camera_id":"C01"},{"lat":17.6700,"lng":83.2200,"timestamp":1725450020,"camera_id":"C02"}]},
+    {"vehicle_id":"VEH_012","plate_number":"AP22JJ8640","points":[{"lat":17.6805,"lng":83.2105,"timestamp":1725450000,"camera_id":"C03"},{"lat":17.6705,"lng":83.2205,"timestamp":1725450020,"camera_id":"C04"}]},
+    {"vehicle_id":"VEH_013","plate_number":"AP23KK9751","points":[{"lat":17.6810,"lng":83.2110,"timestamp":1725450000,"camera_id":"C05"},{"lat":17.6710,"lng":83.2210,"timestamp":1725450020,"camera_id":"C06"}]},
+    {"vehicle_id":"VEH_014","plate_number":"AP24LL0862","points":[{"lat":17.6815,"lng":83.2115,"timestamp":1725450000,"camera_id":"C07"},{"lat":17.6715,"lng":83.2215,"timestamp":1725450020,"camera_id":"C08"}]},
+    {"vehicle_id":"VEH_015","plate_number":"AP25MM1973","points":[{"lat":17.6820,"lng":83.2120,"timestamp":1725450000,"camera_id":"C09"},{"lat":17.6720,"lng":83.2220,"timestamp":1725450020,"camera_id":"C10"}]}
+  ]
+}

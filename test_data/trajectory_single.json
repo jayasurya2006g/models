@@ -1,0 +1,12 @@
+{
+  "vehicle_id": "VEH_001",
+  "plate_number": "AP39XX1234",
+  "points": [
+    {"lat": 17.6868, "lng": 83.2185, "timestamp": 1725450000, "camera_id": "CAM_001"},
+    {"lat": 17.6875, "lng": 83.2192, "timestamp": 1725450005, "camera_id": "CAM_002"},
+    {"lat": 17.6883, "lng": 83.2200, "timestamp": 1725450010, "camera_id": "CAM_003"},
+    {"lat": 17.6892, "lng": 83.2210, "timestamp": 1725450015, "camera_id": "CAM_004"},
+    {"lat": 17.6901, "lng": 83.2221, "timestamp": 1725450020, "camera_id": "CAM_005"},
+    {"lat": 17.6910, "lng": 83.2231, "timestamp": 1725450025, "camera_id": "CAM_006"}
+  ]
+}
