@@ -16,3 +16,6 @@ yolov5
 # OCR - License Plate Text Recognition
 paddleocr
 paddlepaddle
+
+# Build & Dependencies
+setuptools
