@@ -1,21 +1,27 @@
+# Production Deployment - CPU Only (Optimized for Render Free Tier)
+# Install with: pip install -r requirements-prod.txt
+
 # Core Framework
-fastapi
-uvicorn[standard]
-python-multipart
-pydantic
-python-dotenv
+fastapi==0.141.1
+uvicorn[standard]==0.52.4
+python-multipart==0.0.32
+pydantic==2.13.5
+python-dotenv==1.2.3
 
 # Image Processing
-numpy
-opencv-python
+numpy==2.2.6
+opencv-python==5.0.0.93
 
 # ML Models - Object Detection
-ultralytics
-yolov5
+ultralytics==8.4.138
+yolov5==7.0.14
 
 # OCR - License Plate Text Recognition
-paddleocr
-paddlepaddle
+paddleocr==3.7.0
+paddlepaddle==3.3.1
 
 # Build & Dependencies
-setuptools
+setuptools==84.0.0
+
+# Note: PyTorch CPU wheels are installed separately via:
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
