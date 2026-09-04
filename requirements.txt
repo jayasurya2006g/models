@@ -1,11 +1,18 @@
+# Core Framework
 fastapi
 uvicorn[standard]
 python-multipart
+pydantic
+python-dotenv
+
+# Image Processing
 numpy
 opencv-python
+
+# ML Models - Object Detection
 ultralytics
 yolov5
-pydantic
+
+# OCR - License Plate Text Recognition
 paddleocr
 paddlepaddle
-python-dotenv
